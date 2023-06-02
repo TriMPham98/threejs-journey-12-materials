@@ -30,13 +30,16 @@ const scene = new THREE.Scene();
 /**
  * Objects
  */
-const material = new THREE.MeshBasicMaterial();
-material.map = doorColorTexture;
+// const material = new THREE.MeshBasicMaterial();
+// material.map = doorColorTexture;
 // material.color = new THREE.Color("cyan");
 // material.wireframe = true;
-material.transparent = true;
-material.alphaMap = doorAlphaTexture;
-material.side = THREE.DoubleSide;
+// material.transparent = true;
+// material.alphaMap = doorAlphaTexture;
+// material.side = THREE.DoubleSide;
+
+const material = new THREE.MeshNormalMaterial();
+material.wireframe = true;
 
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.5, 16, 16), material);
 
