@@ -8,15 +8,15 @@ const textureLoader = new THREE.TextureLoader();
 
 const doorColorTexture = textureLoader.load("/textures/door/color.jpg");
 const doorAlphaTexture = textureLoader.load("/textures/door/alpha.jpg");
-const doorAmbientOcclusion = textureLoader.load("/textures/door/ambientOcclusion.jpg");
+const doorAmbientOcclusion = textureLoader.load(
+  "/textures/door/ambientOcclusion.jpg"
+);
 const doorHeightTexture = textureLoader.load("/textures/door/height.jpg");
 const doorNormalTexture = textureLoader.load("/textures/door/normal.jpg");
 const doorMetalnessTexture = textureLoader.load("/textures/door/metalness.jpg");
 const doorRoughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
 const matcapTexture = textureLoader.load("/textures/matcaps/1.png");
 const gradientTexture = textureLoader.load("textures/gradients/3.jpg");
-
-
 
 /**
  * Base
@@ -36,6 +36,7 @@ material.map = doorColorTexture;
 // material.wireframe = true;
 material.transparent = true;
 material.alphaMap = doorAlphaTexture;
+material.side = THREE.DoubleSide;
 
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.5, 16, 16), material);
 
@@ -43,7 +44,10 @@ sphere.position.x = -1.5;
 
 const plane = new THREE.Mesh(new THREE.PlaneGeometry(1, 1), material);
 
-const torus = new THREE.Mesh(new THREE.TorusGeometry(0.3, 0.2, 16, 32), material);
+const torus = new THREE.Mesh(
+  new THREE.TorusGeometry(0.3, 0.2, 16, 32),
+  material
+);
 
 torus.position.x = 1.5;
 
