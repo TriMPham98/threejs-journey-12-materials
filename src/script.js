@@ -18,6 +18,17 @@ const doorRoughnessTexture = textureLoader.load("/textures/door/roughness.jpg");
 const matcapTexture = textureLoader.load("/textures/matcaps/1.png");
 const gradientTexture = textureLoader.load("textures/gradients/3.jpg");
 
+// const material = new THREE.MeshBasicMaterial();
+// material.map = doorColorTexture;
+// material.color = new THREE.Color("cyan");
+// material.wireframe = true;
+// material.transparent = true;
+// material.alphaMap = doorAlphaTexture;
+// material.side = THREE.DoubleSide;
+
+const material = new THREE.MeshNormalMaterial();
+material.wireframe = true;
+
 /**
  * Base
  */
@@ -30,17 +41,6 @@ const scene = new THREE.Scene();
 /**
  * Objects
  */
-// const material = new THREE.MeshBasicMaterial();
-// material.map = doorColorTexture;
-// material.color = new THREE.Color("cyan");
-// material.wireframe = true;
-// material.transparent = true;
-// material.alphaMap = doorAlphaTexture;
-// material.side = THREE.DoubleSide;
-
-const material = new THREE.MeshNormalMaterial();
-material.wireframe = true;
-
 const sphere = new THREE.Mesh(new THREE.SphereGeometry(0.5, 16, 16), material);
 
 sphere.position.x = -1.5;
