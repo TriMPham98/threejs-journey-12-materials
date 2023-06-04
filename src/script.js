@@ -28,6 +28,9 @@ const gradientTexture = textureLoader.load("textures/gradients/3.jpg");
 
 const material = new THREE.MeshNormalMaterial();
 material.wireframe = true;
+// material.flatShading = true;
+// material.transparent = true;
+// material.opacity = 0.69
 
 /**
  * Base
