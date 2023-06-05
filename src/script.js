@@ -38,7 +38,11 @@ const gradientTexture = textureLoader.load("textures/gradients/3.jpg");
 
 // const material = new THREE.MeshDepthMaterial();
 
-const material = new THREE.MeshLambertMaterial();
+// const material = new THREE.MeshLambertMaterial();
+
+const material = new THREE.MeshPhongMaterial();
+material.shininess = 100;
+material.specular = new THREE.Color(0xff0000);
 
 /**
  * Base
