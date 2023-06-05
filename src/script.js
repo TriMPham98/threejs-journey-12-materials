@@ -32,9 +32,11 @@ const gradientTexture = textureLoader.load("textures/gradients/3.jpg");
 // material.transparent = true;
 // material.opacity = 0.69
 
-const material = new THREE.MeshMatcapMaterial();
-material.matcap = matcapTexture;
+// const material = new THREE.MeshMatcapMaterial();
+// material.matcap = matcapTexture;
 // material.wireframe = true;
+
+const material = new THREE.MeshDepthMaterial();
 
 /**
  * Base
