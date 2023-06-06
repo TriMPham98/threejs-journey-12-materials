@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import * as dat from 'lil-gui';
 
 /**
  * Textures
@@ -51,6 +52,8 @@ gradientTexture.generateMipmaps = false;
 // material.gradientMap = gradientTexture;
 
 const material = new THREE.MeshStandardMaterial();
+material.metalness = 0.45;
+material.roughness = 0.65;
 
 
 /**
