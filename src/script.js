@@ -47,8 +47,11 @@ gradientTexture.generateMipmaps = false;
 // material.shininess = 100;
 // material.specular = new THREE.Color(0xff0000);
 
-const material = new THREE.MeshToonMaterial();
-material.gradientMap = gradientTexture;
+// const material = new THREE.MeshToonMaterial();
+// material.gradientMap = gradientTexture;
+
+const material = new THREE.MeshStandardMaterial();
+
 
 /**
  * Base
