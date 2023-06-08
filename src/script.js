@@ -67,6 +67,9 @@ material.displacementScale = 0.05;
 material.metalnessMap = doorMetalnessTexture;
 material.roughnessMap = doorRoughnessTexture;
 material.normalMap = doorNormalTexture;
+material.normalScale.set(0.5, 0.5);
+material.transparent = true;
+material.alphaMap = doorAlphaTexture;
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
 gui.add(material, "roughness").min(0).max(1).step(0.0001);
