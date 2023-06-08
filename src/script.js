@@ -64,12 +64,14 @@ material.aoMap = doorAmbientOcclusion;
 material.aoMapIntensity = 1;
 material.displacementMap = doorHeightTexture;
 material.displacementScale = 0.05;
+material.metalnessMap = doorMetalnessTexture;
+material.roughnessMap = doorRoughnessTexture;
+material.normalMap = doorNormalTexture;
 
 gui.add(material, "metalness").min(0).max(1).step(0.0001);
 gui.add(material, "roughness").min(0).max(1).step(0.0001);
 gui.add(material, "aoMapIntensity").min(0).max(10).step(0.0001);
 gui.add(material, "displacementScale").min(0).max(1).step(0.0001);
-
 
 /**
  * Base
@@ -175,13 +177,13 @@ const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
   // Update objects
-  sphere.rotation.x = 0.15 * elapsedTime;
-  plane.rotation.x = 0.15 * elapsedTime;
-  torus.rotation.x = 0.15 * elapsedTime;
+  // sphere.rotation.x = 0.15 * elapsedTime;
+  // plane.rotation.x = 0.15 * elapsedTime;
+  // torus.rotation.x = 0.15 * elapsedTime;
 
-  sphere.rotation.y = 0.1 * elapsedTime;
-  plane.rotation.y = 0.1 * elapsedTime;
-  torus.rotation.y = 0.1 * elapsedTime;
+  // sphere.rotation.y = 0.1 * elapsedTime;
+  // plane.rotation.y = 0.1 * elapsedTime;
+  // torus.rotation.y = 0.1 * elapsedTime;
 
   // Update controls
   controls.update();
